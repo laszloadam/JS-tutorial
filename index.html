@@ -9,8 +9,16 @@
 </head>
 
 <body>
-<div id="content">
-  <form>
+<div id="content" onscroll="scrollLine()">
+  <div id="scrollList">
+    <div class="scrollPoint"></div>
+    <div id="scrollNumber"></div>
+    <div class="scrollPoint"></div>
+    <div class="scrollPoint"></div>
+    <div class="scrollPoint"></div>
+    <div class="scrollPoint"></div>
+  </div>
+  <form id="form">
     <div class="pages">
       <h1>Kvíz játék</h1>
       <p>Ez egy kérdéssor. Ha helyes válaszokat adsz, pontokat szerzel.</p>
@@ -66,10 +74,10 @@
         <input type="reset" onclick="resetAll()" value="Újra">
         <input type="submit" value="Küldés">
       </div>
-      <div id="test"></div>
     </div>
   </form>
 </div>
+<div id="test"></div>
 <script src="script.js"></script>
 </body>
 </html>

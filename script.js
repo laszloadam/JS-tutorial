@@ -5,7 +5,9 @@ let answers = [3,1,2];
 var serial = 1;
 var actualValue =null;
 let scrollHeight = 190;
-let content = document.getElementById('content')
+let content = document.getElementById('content');
+let scrollNumber = document.getElementById('scrollNumber');
+let scrollValue = 0;
 
 function selectQ(x) {
   actualValue = x.value;
@@ -41,4 +43,12 @@ function resetAll(){
     questions[i].style.backgroundColor="#909090"
     };
   
+}
+function scrollLine() {
+  scrollValue = content.scrollTop*0.1;
+  scrollNumber.style.top=scrollValue+'px';
+  if(scrollValue >=700){
+    scrollValue =700
+  }
+  test.innerHTML = scrollValue
 }
