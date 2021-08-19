@@ -9,21 +9,19 @@
 </head>
 
 <body>
-<div id="content" onscroll="scrollLine()">
+<div id="content">
   <div id="scrollList">
-    <div class="scrollPoint"></div>
-    <div id="scrollNumber"></div>
-    <div class="scrollPoint"></div>
-    <div class="scrollPoint"></div>
-    <div class="scrollPoint"></div>
-    <div class="scrollPoint"></div>
+    <div id="scrollSlider"></div>
+    <div class="scrollPoint" onclick="jumpTo('question1'); slideTo(1)"></div>
+    <div class="scrollPoint" onclick="jumpTo('question2'); slideTo(2)"></div>
+    <div class="scrollPoint" onclick="jumpTo('question3'); slideTo(3)"></div>
   </div>
   <form id="form">
     <div class="pages">
       <h1>Kvíz játék</h1>
       <p>Ez egy kérdéssor. Ha helyes válaszokat adsz, pontokat szerzel.</p>
       <div class="btns">
-        <input type="button" onclick="nextQ(1); scrolling()" value="Tovább">
+        <input type="button" onclick="nextQ(1); scrolling(1); slideTo(1)" value="Tovább">
       </div>
     </div>
     <div class="pages" id="question1">
@@ -36,7 +34,7 @@
         <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)" value="3">
         <label class="questions" id="q1_3Label" for="q1_3">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(2); scrolling()" value="Tovább">
+          <input type="button" onclick="nextQ(2); scrolling(2); slideTo(2)" value="Tovább">
         </div>
       </div>
     </div>
@@ -50,7 +48,7 @@
         <input type="radio" id="q2_3" name="question2" onclick="selectQ(this)" value="3">
         <label class="questions" id="q2_3Label" for="q2_3">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(3); scrolling()" value="Tovább">
+          <input type="button" onclick="nextQ(3); scrolling(3); slideTo(3)" value="Tovább">
         </div>
       </div>
     </div>
@@ -64,11 +62,11 @@
         <input type="radio" id="q3_3" name="question3" onclick="selectQ(this)" value="3">
         <label class="questions" id="q3_3Label" for="q3_3">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(4); scrolling()" value="Tovább">
+          <input type="button" onclick="nextQ(4); scrolling(4)" value="Tovább">
         </div>
       </div>
     </div>
-    <div class="pages" id="end">
+    <div class="pages end" id="question4">
       <h3>Gratulálunk!</h3>
       <div class="btnsEnd">
         <input type="reset" onclick="resetAll()" value="Újra">

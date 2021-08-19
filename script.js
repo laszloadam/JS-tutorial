@@ -1,13 +1,13 @@
 let test = document.getElementById('test');
-let radioGroupN = document.getElementById('radioGroup'+serial);
+let form = document.getElementById('form');
+let scrollSlider = document.getElementById('scrollSlider');
+
+let scrollPoint = document.getElementsByClassName('scrollPoint');
 let questions = document.getElementsByClassName('questions');
+
 let answers = [3,1,2];
 var serial = 1;
-var actualValue =null;
-let scrollHeight = 190;
-let content = document.getElementById('content');
-let scrollNumber = document.getElementById('scrollNumber');
-let scrollValue = 0;
+
 
 function selectQ(x) {
   actualValue = x.value;
@@ -26,29 +26,24 @@ function nextQ(x){
   
     serial = x;
 };
-function scrolling() {
-  content.scrollTo({
-    top:scrollHeight,
-    left:0,
-    behavior: "smooth"
-  });
-  scrollHeight= scrollHeight+170
+
+function scrolling(x) {
+  document.getElementById('question'+x).scrollIntoView({behavior: "smooth"})
 };
 
 function resetAll(){
-  scrollHeight=190;
-  content.scrollTo(0,0);
+  form.scrollTo(0,0);
+  scrollSlider.style.top = '-20px';
   serial=1;
   for(let i=0; i<=questions.length; i++){
     questions[i].style.backgroundColor="#909090"
     };
-  
 }
-function scrollLine() {
-  scrollValue = content.scrollTop*0.1;
-  scrollNumber.style.top=scrollValue+'px';
-  if(scrollValue >=700){
-    scrollValue =700
-  }
-  test.innerHTML = scrollValue
+
+function jumpTo(x){
+  document.getElementById(x).scrollIntoView({behavior: "smooth"})
+}
+
+function slideTo(x){
+  scrollSlider.style.top =(x*2)+'5%'
 }
