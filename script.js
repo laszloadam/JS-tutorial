@@ -1,23 +1,20 @@
 let test = document.getElementById('test');
 let form = document.getElementById('form');
 let questions = document.getElementsByClassName('questions');
-
+var actualValue = ""
 let answers = [3,1,2];
 var serial = 1;
 
+test.innerHTML = actualValue;
 
 function selectQ(x) {
   actualValue = x.value;
   for(let i=1;i<=3;i++){
     document.getElementById('q'+serial+'_'+i+'Label').style.backgroundColor = "#909090";
-  }
-  let xLabel = document.getElementById(x.id+'Label');
-  if ((answers[serial-1]) == actualValue) {
-    xLabel.style.backgroundColor="green"
-  } else {
-    xLabel.style.backgroundColor="red"
   };
-  
+  document.getElementById('q'+serial+'_'+x.value+'Label').style.backgroundColor = "orange";
+  document.getElementById('q'+serial+'_'+x.value+'Label').style.outline = "2px solid #000000";
+  document.getElementById('qBtn'+serial).disabled=false;
 }
 
 function addHover(t){
@@ -28,8 +25,14 @@ function remHover(t){
 }
 
 function nextQ(x){
-  
-    serial = x;
+    if(actualValue == answers[serial-1]){
+      let thisQ = document.getElementById('q'+serial+'_'+actualValue+'Label');
+      thisQ.style.backgroundColor = "green"
+    };
+    if (actualValue != answers[serial-1]) {
+      thisQ.style.backgroundColor = "red";
+    };
+    console.log('q'+serial+'_'+actualValue+'Label');
 };
 
 function scrolling(x) {

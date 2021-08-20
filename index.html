@@ -15,7 +15,7 @@
       <h1>Kvíz játék</h1>
       <p>Ez egy kérdéssor. Ha helyes válaszokat adsz, pontokat szerzel.</p>
       <div class="btns">
-        <input type="button" onclick="nextQ(1); scrolling(1);" value="Tovább">
+        <input type="button" onclick="scrolling(1);" value="Tovább">
       </div>
     </div>
     <div class="pages" id="question1">
@@ -28,7 +28,7 @@
         <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)"  value="3">
         <label class="questions" id="q1_3Label" for="q1_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(2); scrolling(2);" value="Tovább">
+          <input type="button" id="qBtn1" onclick="nextQ(2);" value="Tovább" disabled>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
         <input type="radio" id="q2_3" name="question2" onclick="selectQ(this)" value="3">
         <label class="questions" id="q2_3Label" for="q2_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(3); scrolling(3);" value="Tovább">
+          <input type="button" id="qBtn2" onclick="nextQ(3); scrolling(3);" value="Tovább">
         </div>
       </div>
     </div>

@@ -29,9 +29,7 @@ h1{margin-top:0}
 input[type="radio"] {
   display:none;
 }
-input:checked + label{
-  background-color: orange
-}
+
 .btns{
   width:100%;
   position: relative
@@ -52,7 +50,7 @@ input:checked + label{
 
 }
 .hover {
-  background-color: orange;
+  background-color: rgb(186, 180, 170);
   outline: 2px solid #000000;
 }
 
