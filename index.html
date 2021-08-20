@@ -10,31 +10,25 @@
 
 <body>
 <div id="content">
-  <div id="scrollList">
-    <div id="scrollSlider"></div>
-    <div class="scrollPoint" onclick="jumpTo('question1'); slideTo(1)"></div>
-    <div class="scrollPoint" onclick="jumpTo('question2'); slideTo(2)"></div>
-    <div class="scrollPoint" onclick="jumpTo('question3'); slideTo(3)"></div>
-  </div>
   <form id="form">
     <div class="pages">
       <h1>Kvíz játék</h1>
       <p>Ez egy kérdéssor. Ha helyes válaszokat adsz, pontokat szerzel.</p>
       <div class="btns">
-        <input type="button" onclick="nextQ(1); scrolling(1); slideTo(1)" value="Tovább">
+        <input type="button" onclick="nextQ(1); scrolling(1);" value="Tovább">
       </div>
     </div>
     <div class="pages" id="question1">
       <h3>Első kérdés</h3>
       <div class="radioGroup" id="radioGroup1">
         <input type="radio" id="q1_1" name="question1" onclick="selectQ(this)" value="1">
-        <label class="questions" id="q1_1Label" for="q1_1">Első válasz</label>
-        <input type="radio" id="q1_2" name="question1" onclick="selectQ(this)" value="2">
-        <label class="questions" id="q1_2Label" for="q1_2">Második válasz</label>
-        <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)" value="3">
-        <label class="questions" id="q1_3Label" for="q1_3">Harmadik válasz</label>
+        <label class="questions" id="q1_1Label" for="q1_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
+        <input type="radio" id="q1_2" name="question1" onclick="selectQ(this)"  value="2">
+        <label class="questions" id="q1_2Label" for="q1_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
+        <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)"  value="3">
+        <label class="questions" id="q1_3Label" for="q1_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(2); scrolling(2); slideTo(2)" value="Tovább">
+          <input type="button" onclick="nextQ(2); scrolling(2);" value="Tovább">
         </div>
       </div>
     </div>
@@ -42,13 +36,13 @@
       <h3>Második kérdés</h3>
       <div class="radioGroup">
         <input type="radio" id="q2_1" name="question2" onclick="selectQ(this)" value="1">
-        <label class="questions" id="q2_1Label" for="q2_1">Első válasz</label>
+        <label class="questions" id="q2_1Label" for="q2_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
         <input type="radio" id="q2_2" name="question2" onclick="selectQ(this)" value="2">
-        <label class="questions" id="q2_2Label" for="q2_2">Második válasz</label>
+        <label class="questions" id="q2_2Label" for="q2_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
         <input type="radio" id="q2_3" name="question2" onclick="selectQ(this)" value="3">
-        <label class="questions" id="q2_3Label" for="q2_3">Harmadik válasz</label>
+        <label class="questions" id="q2_3Label" for="q2_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(3); scrolling(3); slideTo(3)" value="Tovább">
+          <input type="button" onclick="nextQ(3); scrolling(3);" value="Tovább">
         </div>
       </div>
     </div>
@@ -56,11 +50,11 @@
       <h3>Harmadik kérdés</h3>
       <div class="radioGroup">
         <input type="radio" id="q3_1" name="question3" onclick="selectQ(this)" value="1">
-        <label class="questions" id="q3_1Label" for="q3_1">Első válasz</label>
+        <label class="questions" id="q3_1Label" for="q3_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
         <input type="radio" id="q3_2" name="question3" onclick="selectQ(this)" value="2">
-        <label class="questions" id="q3_2Label" for="q3_2">Második válasz</label>
+        <label class="questions" id="q3_2Label" for="q3_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
         <input type="radio" id="q3_3" name="question3" onclick="selectQ(this)" value="3">
-        <label class="questions" id="q3_3Label" for="q3_3">Harmadik válasz</label>
+        <label class="questions" id="q3_3Label" for="q3_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
           <input type="button" onclick="nextQ(4); scrolling(4)" value="Tovább">
         </div>

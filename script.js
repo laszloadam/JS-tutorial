@@ -1,8 +1,5 @@
 let test = document.getElementById('test');
 let form = document.getElementById('form');
-let scrollSlider = document.getElementById('scrollSlider');
-
-let scrollPoint = document.getElementsByClassName('scrollPoint');
 let questions = document.getElementsByClassName('questions');
 
 let answers = [3,1,2];
@@ -11,15 +8,23 @@ var serial = 1;
 
 function selectQ(x) {
   actualValue = x.value;
+  for(let i=1;i<=3;i++){
+    document.getElementById('q'+serial+'_'+i+'Label').style.backgroundColor = "#909090";
+  }
   let xLabel = document.getElementById(x.id+'Label');
   if ((answers[serial-1]) == actualValue) {
     xLabel.style.backgroundColor="green"
   } else {
     xLabel.style.backgroundColor="red"
   };
-  for(let i=1;i<=3;i++){
-    document.getElementById('p'+serial+'_'+i).setAttribute('disabled');
-  }
+  
+}
+
+function addHover(t){
+  t.classList.add("hover")
+}
+function remHover(t){
+  t.classList.remove("hover")
 }
 
 function nextQ(x){
@@ -38,12 +43,4 @@ function resetAll(){
   for(let i=0; i<=questions.length; i++){
     questions[i].style.backgroundColor="#909090"
     };
-}
-
-function jumpTo(x){
-  document.getElementById(x).scrollIntoView({behavior: "smooth"})
-}
-
-function slideTo(x){
-  scrollSlider.style.top =(x*2)+'5%'
 }
