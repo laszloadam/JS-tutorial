@@ -28,7 +28,7 @@
         <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)"  value="3">
         <label class="questions" id="q1_3Label" for="q1_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" id="qBtn1" onclick="nextQ(2);" value="Tovább" disabled>
+          <input type="button" id="qBtn1" onclick="nextQ(2)" value="Tovább" disabled>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
         <input type="radio" id="q2_3" name="question2" onclick="selectQ(this)" value="3">
         <label class="questions" id="q2_3Label" for="q2_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" id="qBtn2" onclick="nextQ(3); scrolling(3);" value="Tovább">
+          <input type="button" id="qBtn2" onclick="nextQ(3)" value="Tovább" disabled>
         </div>
       </div>
     </div>
@@ -56,12 +56,14 @@
         <input type="radio" id="q3_3" name="question3" onclick="selectQ(this)" value="3">
         <label class="questions" id="q3_3Label" for="q3_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
         <div class="btns">
-          <input type="button" onclick="nextQ(4); scrolling(4)" value="Tovább">
+          <input type="button" id="qBtn3" onclick="nextQ(4); rating()" value="Tovább" disabled>
         </div>
       </div>
     </div>
     <div class="pages end" id="question4">
-      <h3>Gratulálunk!</h3>
+      <h3 id="ratingTitle"></h3>
+      <div id="result"></div>
+      <p id="ratingText"></p>
       <div class="btnsEnd">
         <input type="reset" onclick="resetAll()" value="Újra">
         <input type="submit" value="Küldés">
