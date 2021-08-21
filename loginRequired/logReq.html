@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="form">
+    <div id="main">
+      <button id="loginBTN" onclick="loginPage(login)">Belépés</button>
+    <button id="regBTN" onclick="loginPage(registration)">Regisztráció</button>
+    </div>
+    <div id="login">
+      <p class="back" href="#" onclick="back(login)">Vissza</p>
+      <input name="loginName" type="text" placeholder="Felhasználónév / e-mail" required>
+    <input name="loginPassword" type="password" placeholder="Jelszó" required>
+      <p href="#">Elfelejtett jelszó</p>
+    <button>Belépés</button>
+    </div>
+    <div id="registration">
+      <p class="back" href="#" onclick="back(registration)">Vissza</p>
+      <input id="regName" name="regName" type="text" placeholder="Felhasználónév" required>
+      <input id="regEmail" name="regEmail" type="text" placeholder="E-mail cím" required>
+    <input id="regPassword" name="regPassword" type="password" placeholder="Jelszó" required>
+      <input id="regPassword2" name="regPassword2" type="password" placeholder="Jelszó újra" required>
+      <button onclick="newReg()">Regisztráció</button>
+    </div>
+  </form>
+  <script src="script.js"></script>
+  
+</body>
+</html>

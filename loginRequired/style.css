@@ -1,0 +1,47 @@
+*{margin:0}
+body {
+  background: rgb(43,81,139);
+background: radial-gradient(circle, rgba(43,81,139,1) 0%, rgba(74,201,185,1) 50%, rgba(43,81,139,1) 100%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh
+}
+form {
+  background-color: rgba(0,0,0,.2);
+  border: 2px solid #000000;
+  padding:40px;
+  border-radius:20px;
+  max-width:300px;
+  min-width:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+#main {
+  width:100%;
+  display:flex;
+  justify-content:space-between
+}
+input{
+  margin-bottom:20px;
+  width:80%;
+  padding:5px
+}
+input[type="submit"]{
+  margin-top:30px;
+}
+.back {
+  display:block;
+  width:100%;
+  text-align:right;
+  margin-bottom:20px;
+}
+#login, #registration {
+  display:none;
+}
+p {
+  cursor:pointer;
+  color: #000000;
+  font-weight:700
+}

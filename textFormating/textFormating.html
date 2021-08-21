@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="text" id="inputText">
+        <input type="button" id="btn" onclick="send()" value="küldés">
+      
+      </form>
+      <div class="btns">
+        <button class="underline" onclick="textStyle('underline')">U</button>
+        <button class="italic" onclick="textStyle('italic')">I</button>
+        <button class="bold" onclick="textStyle('bold')">B</button>
+        <button class="lineThrough" onclick="textStyle('lineThrough')">A</button>
+        <select id="textSize" onchange="fontSizeChange()">
+          <option value=8>8</option>
+          <option value=10>10</option>
+          <option value=12>12</option>
+          <option value=16>16</option>
+          <option value=18>18</option>
+          <option value=20>20</option>
+          <option value=22>22</option>
+          <option value=24>24</option>
+          <option value=26>26</option>
+          <option value=28>28</option>
+          <option value=30>30</option>
+        </select>
+        <button class="left btn" onclick="textAlign('left')"></button>
+        <button class="center btn" onclick="textAlign('center')"></button>
+        <button class="right btn" onclick="textAlign('right')"></button>
+      </div>
+      <div id="outputText"></div>
+      <div id="test"></div>
+      <script src="script.js"></script>
+</body>
+</html>

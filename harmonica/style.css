@@ -1,0 +1,39 @@
+.harmonic{
+  
+}
+.cards {
+  word-break: break-all;
+  height:300px;
+  width:50px;
+  border:2px solid #000000;
+  border-radius:10px;
+  display:inline-block;
+  transition: .3s ease-out;
+  overflow:hidden;
+  }
+.cardText {
+  min-width:400px;
+}
+#green{
+  background-color:#00FF00;
+  width:400px;
+}
+#red{
+  background-color:#FF0000
+}
+#blue{
+  background-color:#0000FF
+}
+#yellow{
+  background-color:#FFFF00
+}
+#cyan{
+  background-color:#00FFFF
+}
+#white{
+  background-color:#FFFFFF
+}#orange{
+  background-color:#FFa500
+}#pink{
+  background-color:#FF00FF
+}
