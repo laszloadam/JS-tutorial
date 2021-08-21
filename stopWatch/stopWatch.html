@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="stopper">
+        <div class="left">
+          <div id="display"></div>
+        <div id="btns">
+          <button id="startBtn" onclick="start()">&#9205;</button>
+          <button id="flagBtn" onclick="flags()">&#9872;</button>
+          <button id="stopBtn" onclick="stop()">&#9208;</button>
+          <button id="resetBtn" onclick="reset()">&#10226;</button>
+        </div>
+        </div>
+        <div class="right">
+          <ol id="flagDiv"></ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
