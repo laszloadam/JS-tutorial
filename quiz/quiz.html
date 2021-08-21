@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kvíz</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+<div id="content">
+  <form id="form">
+    <div class="pages">
+      <h1>Kvíz játék</h1>
+      <p>Ez egy kérdéssor. Ha helyes válaszokat adsz, pontokat szerzel.</p>
+      <div class="btns">
+        <input type="button" onclick="scrolling(1);" value="Tovább">
+      </div>
+    </div>
+    <div class="pages" id="question1">
+      <h3>Első kérdés</h3>
+      <div class="radioGroup" id="radioGroup1">
+        <input type="radio" id="q1_1" name="question1" onclick="selectQ(this)" value="1">
+        <label class="questions" id="q1_1Label" for="q1_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
+        <input type="radio" id="q1_2" name="question1" onclick="selectQ(this)"  value="2">
+        <label class="questions" id="q1_2Label" for="q1_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
+        <input type="radio" id="q1_3" name="question1" onclick="selectQ(this)"  value="3">
+        <label class="questions" id="q1_3Label" for="q1_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
+        <div class="btns">
+          <input type="button" id="qBtn1" onclick="nextQ(2)" value="Tovább" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="pages" id="question2">
+      <h3>Második kérdés</h3>
+      <div class="radioGroup">
+        <input type="radio" id="q2_1" name="question2" onclick="selectQ(this)" value="1">
+        <label class="questions" id="q2_1Label" for="q2_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
+        <input type="radio" id="q2_2" name="question2" onclick="selectQ(this)" value="2">
+        <label class="questions" id="q2_2Label" for="q2_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
+        <input type="radio" id="q2_3" name="question2" onclick="selectQ(this)" value="3">
+        <label class="questions" id="q2_3Label" for="q2_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
+        <div class="btns">
+          <input type="button" id="qBtn2" onclick="nextQ(3)" value="Tovább" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="pages" id="question3">
+      <h3>Harmadik kérdés</h3>
+      <div class="radioGroup">
+        <input type="radio" id="q3_1" name="question3" onclick="selectQ(this)" value="1">
+        <label class="questions" id="q3_1Label" for="q3_1" onmouseover="addHover(this)"  onmouseout="remHover(this)">Első válasz</label>
+        <input type="radio" id="q3_2" name="question3" onclick="selectQ(this)" value="2">
+        <label class="questions" id="q3_2Label" for="q3_2" onmouseover="addHover(this)"  onmouseout="remHover(this)">Második válasz</label>
+        <input type="radio" id="q3_3" name="question3" onclick="selectQ(this)" value="3">
+        <label class="questions" id="q3_3Label" for="q3_3" onmouseover="addHover(this)"  onmouseout="remHover(this)">Harmadik válasz</label>
+        <div class="btns">
+          <input type="button" id="qBtn3" onclick="nextQ(4); rating()" value="Tovább" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="pages end" id="question4">
+      <h3 id="ratingTitle"></h3>
+      <div id="result"></div>
+      <p id="ratingText"></p>
+      <div class="btnsEnd">
+        <input type="reset" onclick="resetAll()" value="Újra">
+        <input type="submit" value="Küldés">
+      </div>
+    </div>
+  </form>
+</div>
+<div id="test"></div>
+<script src="script.js"></script>
+</body>
+</html>
