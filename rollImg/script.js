@@ -11,6 +11,5 @@ two.setAttribute('src', "./pics/"+images[1]);
 three.setAttribute('src', "./pics/"+images[2]);
 
 function select(x) {
-    console.log(x);
-    
+    fullView.setAttribute('src', './pics/'+images[x])
 }
