@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mértékegységek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="radio" name="unitForm" id="suly">
+        <label for="suly">Súly</label>
+        <input type="radio" name="unitForm" id="hossz">
+        <label for="hossz">Hossz</label>
+        <input type="radio" name="unitForm" id="ido">
+        <label for="ido">Idő</label>
+<div class="sulyContent">
+    <input type="number" name="grammInput" id="grammInput" placeholder="írj be egy számot">
+    <select name="unitSelectSuly" id="unitSelectSuly">
+        <option value="1">gramm</option>
+        <option value="10">dekagramm</option>
+        <option value="1000">kilogramm</option>
+        <option value="100000">mázsa</option>
+        <option value="1000000">tonna</option>
+    </select>
+    <input value="Átvált" onclick="unitChange()">
+    <input type="number" name="grammOutput" id="grammOutput">
+    <select name="unitSelectOutputSuly" id="unitSelectOutputSuly">
+        <option value="1">gramm</option>
+        <option value="10">dekagramm</option>
+        <option value="1000">kilogramm</option>
+        <option value="100000">mázsa</option>
+        <option value="1000000">tonna</option>
+    </select>
+</div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
