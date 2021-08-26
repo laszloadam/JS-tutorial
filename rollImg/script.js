@@ -7,6 +7,7 @@ let three = document.getElementById('three');
 let minis = document.getElementById('minis');
 let miniView = document.getElementsByClassName('miniView');
 let picsArray=[];
+let left = -160;
 
 fullView.setAttribute('src', "./pics/"+images[1]);
 // one.setAttribute('src', "./pics/"+images[0]);
@@ -22,16 +23,12 @@ for (let i=0; i<images.length; i++){
 
 
 function rightStep(){
-for(let x=0; x<=miniView.length; x++){
-    miniView.setAttribute('left', '-160px');
-}
-    picsArray.push(picsArray.shift(0));
-    
-    minis.innerHTML=picsArray
+        picsArray.push(picsArray.shift(0));
+        minis.innerHTML=picsArray
 }
 
 imgList()
 
-// function select(x) {
-//     fullView.setAttribute('src', './pics/'+images[x])
-// }
+function select(x) {
+    fullView.setAttribute('src', './pics/'+images[x])
+}
