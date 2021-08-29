@@ -13,8 +13,9 @@ let grammOutput = document.getElementById('grammOutput')
 let meterOutput = document.getElementById('meterOutput')
 let timeOutput = document.getElementById('timeOutput')
 let mama = document.getElementById('mama');
+let unitForm = document.getElementsByName('unitForm');
 
-mama.innerHTML= 'mm'
+console.log(unitForm);
 
 
 //súly váltás
