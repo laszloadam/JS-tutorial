@@ -9,13 +9,38 @@
 // mg, milligramm = 1/1000 gramm
 // μg, mikrogramm = 1/1 000 000 gramm
 
+let grammOutput = document.getElementById('grammOutput')
+let meterOutput = document.getElementById('meterOutput')
+let timeOutput = document.getElementById('timeOutput')
+let mama = document.getElementById('mama');
+
+mama.innerHTML= 'mm'
 
 
+//súly váltás
 
-function unitChange() {
+function unitGrammChange() {
     let grammInput = document.getElementById('grammInput');
-let grammOutput = document.getElementById('grammOutput');
-let unitSelectSuly = document.getElementById('unitSelectSuly');
-let unitSelectOutputSuly = document.getElementById('unitSelectOutputSuly');
-    console.log((grammInput.value * unitSelectSuly.value)/unitSelectOutputSuly.value)
+    let unitSelectGramm = document.getElementById('unitSelectGramm');
+    let unitSelectOutputGramm = document.getElementById('unitSelectOutputGramm');
+    grammOutput.innerHTML = (grammInput.value * unitSelectGramm.value)/unitSelectOutputGramm.value
+}
+
+//hossz váltás
+
+function unitMeterChange() {
+    let meterInput = document.getElementById('meterInput');
+    let unitSelectMeter = document.getElementById('unitSelectMeter');
+    let unitSelectOutputMeter = document.getElementById('unitSelectOutputMeter');
+    meterOutput.innerHTML = (meterInput.value * unitSelectMeter.value)/unitSelectOutputMeter.value
+}
+
+
+//idő váltás
+
+function unitTimeChange() {
+    let timeInput = document.getElementById('timeInput');
+    let unitSelectTime = document.getElementById('unitSelectTime');
+    let unitSelectOutputTime = document.getElementById('unitSelectOutputTime');
+    timeOutput.innerHTML = (timeInput.value * unitSelectTime.value)/unitSelectOutputTime.value
 }
