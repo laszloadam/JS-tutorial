@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mértékegységek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="radio" name="unitForm" id="suly" value=1>
+        <label for="suly">Súly</label>
+        <input type="radio" name="unitForm" id="hossz" value=2>
+        <label for="hossz">Hossz</label>
+        <input type="radio" name="unitForm" id="ido" value=3>
+        <label for="ido">Idő</label>
+        <p id="mama"></p>
+
+        <div class="sulyContent contents">
+            <h2>Súly számítás</h2>
+            <input type="number" name="grammInput" id="grammInput" placeholder="írj be egy számot">
+            <select name="unitSelectGramm" id="unitSelectGramm">
+                <option value="1">gramm</option>
+                <option value="10">dekagramm</option>
+                <option value="1000">kilogramm</option>
+                <option value="100000">mázsa</option>
+                <option value="1000000">tonna</option>
+            </select>
+            <input  type="button" value="Átvált" onclick="unitGrammChange()">
+            <p id="grammOutput"></p>
+            <select name="unitSelectOutputGramm" id="unitSelectOutputGramm">
+                <option value="1">gramm</option>
+                <option value="10">dekagramm</option>
+                <option value="1000">kilogramm</option>
+                <option value="100000">mázsa</option>
+                <option value="1000000">tonna</option>
+            </select>
+        </div>
+        <div class="hosszContent contents">
+            <h2>Hossz számítás</h2>
+            <input type="number" name="meterInput" id="meterInput" placeholder="írj be egy számot">
+            <select name="unitSelectMeter" id="unitSelectMeter">
+                <option value="1">miliméter</option>
+                <option value="10">centiméter</option>
+                <option value="100">deciméter</option>
+                <option value="1000">méter</option>
+                <option value="1000000">kilóméter</option>
+            </select>
+            <input type="button" value="Átvált" onclick="unitMeterChange()">
+            <p id="meterOutput"></p>
+            <select name="unitSelectOutputMeter" id="unitSelectOutputMeter">
+                <option value="1">miliméter</option>
+                <option value="10">centiméter</option>
+                <option value="100">deciméter</option>
+                <option value="1000">méter</option>
+                <option value="1000000">kilóméter</option>
+            </select>
+        </div>
+        <div class="idoContent contents">
+            <h2>Idő számítás</h2>
+            <input type="number" name="timeInput" id="timeInput" placeholder="írj be egy számot">
+            <select name="unitSelectTime" id="unitSelectTime">
+                <option value="1">másodperc</option>
+                <option value="60">perc</option>
+                <option value="3600">óra</option>
+                <option value="86400">nap</option>
+                <option value="604800">hét</option>
+            </select>
+            <input  type="button" value="Átvált" onclick="unitTimeChange()">
+            <p id="timeOutput"></p>
+            <select name="unitSelectOutputTime" id="unitSelectOutputTime">
+                <option value="1">másodperc</option>
+                <option value="60">perc</option>
+                <option value="3600">óra</option>
+                <option value="86400">napa</option>
+                <option value="604800">hét</option>
+            </select>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
