@@ -1,4 +1,5 @@
 let levels = document.getElementsByClassName('levels');
+let liftCabine=document.getElementById('lift');
 let lv0 = document.getElementById('lv0');
 
 let level1 = document.getElementById('level1');
@@ -21,23 +22,38 @@ let level9 = document.getElementById('level9');
 
 let level10 = document.getElementById('level10');
 
-
-let levelArrays = [
-  level1Array = [],
-  level2Array = [],
-  level3Array = [],
-  level4Array = [],
-  level5Array = [],
-  level6Array = [],
-  level7Array = [],
-  level8Array = [1],
-  level9Array = [],
-  level10Array = []
-  ];
+var levelHeight =1;
 
 let lift =[];
 
 var lakok=0;
+
+
+let levelArrays = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+  ];
+
+function writeArrays(){
+  level1.innerHTML=levelArrays[0];
+  level2.innerHTML=levelArrays[1];
+  level3.innerHTML=levelArrays[2];
+  level4.innerHTML=levelArrays[3];
+  level5.innerHTML=levelArrays[4];
+  level6.innerHTML=levelArrays[5];
+  level7.innerHTML=levelArrays[6];
+  level8.innerHTML=levelArrays[7];
+  level9.innerHTML=levelArrays[8];
+  level10.innerHTML=levelArrays[9];
+}
 
 function general() {
   let addember =setInterval(adding, 400)
@@ -50,16 +66,7 @@ function general() {
       clearInterval(addember)
     } else{
       levelArrays[randomLevel].push(randomN);
-      level1.innerHTML=levelArrays[0];
-      level2.innerHTML=levelArrays[1];
-      level3.innerHTML=levelArrays[2];
-      level4.innerHTML=levelArrays[3];
-      level5.innerHTML=levelArrays[4];
-      level6.innerHTML=levelArrays[5];
-      level7.innerHTML=levelArrays[6];
-      level8.innerHTML=levelArrays[7];
-      level9.innerHTML=levelArrays[8];
-      level10.innerHTML=levelArrays[9];
+      writeArrays();
       lakok++;
       
         if (levelArrays[randomLevel].length >= 5) {
@@ -68,29 +75,79 @@ function general() {
       }
     }
   };
-  var levelHeight =1;
-function lifting(){
-  level8.innerHTML=levelArrays[7];
-  for(let x=0;x<=9;x++){
-    if (levelArrays[x].length !=0){
-      let liftCabine=document.getElementById('lift');
-      setInterval(liftGo, 200);
-      function liftGo() {
-        lv0.innerHTML=levelHeight;
-        if(levelHeight<=(x+"0")){
-          liftCabine.style.bottom = levelHeight + "%";
-          levelHeight++
-        } else{
-          clearInterval(liftGo);
-          lift.push(levelArrays[x].shift(0));
-          level8.innerHTML = levelArrays[x];
+
+function notEmpty(x){
+  return x !=''
+}
+
+function addOn(x){
+  levelArrays[x].push(1);
+  writeArrays();
+  if(levelArrays.find(notEmpty)){
+    lifting(x);
+    lv0.innerHTML =x
+    if(levelHeight==x){
+    writeArrays();
+    }
+    
+  }
+}
+
+console.log(levelArrays.filter(empty));
+function empty(x){
+  return x != ''
+}
+
+
+function lifting(n){
+  writeArrays();
+  setInterval(liftUp, 50);
+
+  function liftUp() {
+    if(levelHeight <=90){
+      liftCabine.style.bottom = levelHeight + "%";
+      levelHeight++
+      } else {
+        clearInterval(liftUp);
+        if(levelArrays[n].length !=0){
+          lift.push(levelArrays[n].shift(0));
           liftCabine.innerHTML = lift
+          writeArrays();
         }
-        
-      }
-      
-      
-      
+      };
+      if(lift.length!=0){
+        setInterval(liftDown, 50);
+        }
+    }
+  function liftDown(){
+    liftCabine.style.bottom = levelHeight+'0%';
+    if(levelHeight>0){
+      levelHeight--
+    } else {
+      clearInterval(liftDown)
     }
   }
+  // for(let x=0;x<=9;x++){
+  //   if (levelArrays[x].length !=0){
+  //     let liftCabine=document.getElementById('lift');
+  //     setInterval(liftGo, 100);
+
+
+  //     function liftGo() {
+  //       lv0.innerHTML=levelHeight;
+  //       if(levelHeight<=(x+"0")){
+  //         liftCabine.style.bottom = levelHeight + "%";
+  //         levelHeight++
+  //       }
+        
+  //       else{
+  //         clearInterval(liftGo);
+  //         lift.push(levelArrays[x].shift(0));
+  //         writeArrays();
+  //         liftCabine.innerHTML = lift;
+  //         lv0.innerHTML = lift.length
+  //       }
+  //     }
+  //   }
+  // }
 }
