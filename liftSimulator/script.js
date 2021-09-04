@@ -35,10 +35,11 @@ let levelArrays = [
   level10Array = []
   ];
 
+let lift =[];
 
 var lakok=0;
 
-//function general() {
+function general() {
   let addember =setInterval(adding, 400)
   function adding() {
     
@@ -64,8 +65,32 @@ var lakok=0;
         if (levelArrays[randomLevel].length >= 5) {
           levelArrays[randomLevel].shift(0)
         }
+      }
     }
-    
+  };
+  var levelHeight =1;
+function lifting(){
+  level8.innerHTML=levelArrays[7];
+  for(let x=0;x<=9;x++){
+    if (levelArrays[x].length !=0){
+      let liftCabine=document.getElementById('lift');
+      setInterval(liftGo, 200);
+      function liftGo() {
+        lv0.innerHTML=levelHeight;
+        if(levelHeight<=(x+"0")){
+          liftCabine.style.bottom = levelHeight + "%";
+          levelHeight++
+        } else{
+          clearInterval(liftGo);
+          lift.push(levelArrays[x].shift(0));
+          level8.innerHTML = levelArrays[x];
+          liftCabine.innerHTML = lift
+        }
+        
+      }
+      
+      
+      
+    }
   }
-  
 }
