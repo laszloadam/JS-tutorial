@@ -18,7 +18,8 @@ body{
 #liftCase{
   width:20px;
   border-right: 2px solid #000000;
-  position: relative
+  position: relative;
+  
 }
 #lift {
   width: 100%;
@@ -28,6 +29,7 @@ body{
   border:2px solid #000000;
   box-sizing: border-box;
   text-align: center;
+  transition: all .5s;
 }
 #panelLevels {
   display: flex;

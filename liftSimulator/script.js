@@ -1,13 +1,17 @@
 //let levels = document.getElementsByClassName('levels');
-let liftCabine=document.getElementById('lift');
+let liftCabine = document.getElementById('lift');
 let lv0 = document.getElementById('lv0');
 
 
-var levelHeight =0;
 
 let lift =[];
 
-var lakok=0;
+var lakok=20;
+lv0.textContent=lakok;
+
+let randomLevel;
+
+let incoming;
 
 let levelArrays = [
   [],
@@ -42,48 +46,62 @@ function notEmpty(x){
 };
 
 
+function somebodyIncoming() {
+  levelArrays[0].push(1)
+  writeArrays();
+  console.log(levelArrays.filter(notEmpty))
+}
+
+
 function general() {
-  let addember =setInterval(adding, 400)
+  let addember =setInterval(adding, 2000)
   function adding() {
     
-    let randomLevel = Math.floor(Math.random()*10);
-    let randomN = Math.floor(Math.random()*10);
-    console.log(levelArrays)
-    if(lakok >=60){
-      clearInterval(addember)
-    } else{
-      levelArrays[randomLevel].push(randomN);
-      writeArrays();
-      lakok++;
+    randomLevel = Math.floor(Math.random()*10);
+    if(randomLevel == 0){
+      incoming = Math.floor(Math.random()*10);
+
+    }
+    if(lakok <=1){
+      clearInterval(addember);
+      console.log('Szimuláció vége')
+    }
+    else {
+      levelArrays[randomLevel].push('1');
+      addOn(randomLevel)
+      //writeArrays();
       
-        if (levelArrays[randomLevel].length >= 5) {
-          levelArrays[randomLevel].shift(0)
+    }
+  }
+};
+function addOn(x){
+  writeArrays();
+  if(levelArrays.find(notEmpty)){
+    liftCabine.style.bottom = x + "0%";
+    setTimeout(liftUp, 1000);
+    
+    function liftUp() {
+      lift.push(levelArrays[x].shift(0));
+      liftCabine.innerHTML = lift.length;
+      writeArrays();
+    }
+    // if (condition) {
+      
+    // }
+    if(lift.length == 4){
+      
+      setTimeout(liftDown, 1000);
+      function liftDown(){
+        console.log('megtelt');
+        liftCabine.style.bottom = "0%";
+        setTimeout(liftOut, 1000)
+        function liftOut(){
+          lift=[];
+          lakok=lakok-5;
+          liftCabine.innerHTML = lift.length
+          lv0.textContent=lakok;
         }
       }
     }
-  };
-
-
-function addOn(x){
-  levelArrays[x].push(1);
-  writeArrays();
-  if(levelArrays.find(notEmpty)){
-    lifting(x);
-  }
-
-  function lifting(n){
-    setInterval(liftUp, 10);
-    function liftUp() {
-      if(levelHeight < (n+'0')){
-          liftCabine.style.bottom = levelHeight + "%";
-          levelHeight++;
-          console.log(levelHeight);
-          clearInterval(liftUp);
-      }else{
-          console.log(n);
-            clearInterval(liftUp);
-      }
-    };
-    clearInterval(liftUp);
   }
 }
