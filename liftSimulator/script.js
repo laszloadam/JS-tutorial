@@ -64,53 +64,26 @@ function general() {
   };
 
 
-
-
 function addOn(x){
   levelArrays[x].push(1);
   writeArrays();
   if(levelArrays.find(notEmpty)){
     lifting(x);
   }
-};
 
-
-function lifting(n){
-  setInterval(liftUp, 10);
-  
-  function liftUp() {
-    if(levelHeight < n+'0'){
-      liftCabine.style.bottom = levelHeight + "%";
-      levelHeight++;
-      } else if(levelHeight == n+'0') {
-        clearInterval(liftUp);
-        if(levelArrays[n].length !=0){
-          lift.push(levelArrays[n].shift(0));
-          liftCabine.innerHTML = lift.length
-          writeArrays();
-          liftUp();
-          if((n+1)>9){
-            console.log('tető!');
-            setInterval(liftDown, 50);
-            function liftDown(){
-              while(n>=0){
-                console.log(n+'0');
-                n--;
-                liftCabine.style.bottom = n + "0%";
-              } if ((n+1)<1){
-
-                // Nem áll le. csináld meg!
-                console.log('futás vége');
-                clearInterval(liftDown)
-              }
-              }
-            }
-          
-          
-        }
+  function lifting(n){
+    setInterval(liftUp, 10);
+    function liftUp() {
+      if(levelHeight < (n+'0')){
+          liftCabine.style.bottom = levelHeight + "%";
+          levelHeight++;
+          console.log(levelHeight);
+          clearInterval(liftUp);
+      }else{
+          console.log(n);
+            clearInterval(liftUp);
       }
-      
-    }
-  
-  
+    };
+    clearInterval(liftUp);
+  }
 }
