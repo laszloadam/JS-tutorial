@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    background-color: darkgrey;
+    height: 100vh;
+    position: relative;
+    
+    
+}
+.content {
+    height: 100vh;
+    overflow: auto;
+    perspective: 1000px;
+}
+h1 {
+    position: absolute;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    padding:0;
+}
+.lines {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.lines:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+.vLine {
+    background-color: dodgerblue;
+    width: .5%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    transform: translateZ(-100px);
+    position: relative;
+}
+.ball {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: darkgrey;
+    border-radius: 20px;
+    border: 8px solid dodgerblue;
+    position: absolute;
+}
+.ballLine{
+    position: absolute;
+    border: 1px solid black;
+    width: 200px;
+}
+.lines:first-child > .vLine {
+    border-radius: 15px 15px 0 0;
+}
+.lines:last-child > .vLine {
+    border-radius: 0 0 15px 15px;
+}
+.lines:nth-child(odd) > .vLine > .ballLine {
+    right:0px
+}
+.lines:nth-child(even) > .vLine > .ballLine {
+    left:0px
+}
+
+.lines:nth-child(even) > .date {
+    text-align: right;
+}
+.lines:nth-child(odd) > .text {
+    transform: rotateY(20deg) scale3d(.70,.70,.70);
+    zoom: 140%;
+}
+.lines:nth-child(even) > .text {
+    transform: rotateY(-20deg) scale3d(.70,.70,.70);
+    zoom: 140%;
+}
+
+.date {
+    width: 40%;
+    padding: 20px;
+    margin:20px 0;
+    box-sizing: border-box;
+}
+.text {
+    font-size: 16px;
+    width: 40%;
+    margin:20px 0;
+    padding:15px;
+    box-sizing: border-box;
+    background: rgb(43,81,139);
+    background: linear-gradient(135deg, rgba(43,81,139,1) 0%, rgb(165, 168, 201) 50%, rgba(43,81,139,1) 100%);
+    border-radius: 20px;
+}
