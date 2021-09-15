@@ -1,0 +1,9 @@
+#menu1{
+  height:0px;
+  border:1px solid black;
+  overflow: hidden;
+  transition: all .5s
+}
+#c1:checked ~ #menu1 {
+  height:80px;
+}
