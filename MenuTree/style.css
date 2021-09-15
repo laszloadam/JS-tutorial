@@ -1,9 +1,20 @@
+nav {
+  position: relative;
+}
 #menu1{
   height:0px;
-  border:1px solid black;
+  border-left:1px solid black;
   overflow: hidden;
-  transition: all .5s
+  transition: all .5s;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+li::before{
+  content: '----';
+  left: 0;
+  overflow: hidden;
 }
 #c1:checked ~ #menu1 {
-  height:80px;
+  height:60px;
 }
+
