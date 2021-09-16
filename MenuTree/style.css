@@ -13,14 +13,17 @@ li{
   display: flex;
   align-items: center
 }
-li div{
+.verticalBranch{
   width:10px;
   height: 1px;
   margin: 0;
   border-top:3px dotted black;
 }
-c1:checked ~ #menu1 {
-  height:100px;
+.menuElement {
+  margin-left:10px;
+}
+#c1:checked ~ #menu1 {
+  height:72px;
 }
 
 .treeLine{
