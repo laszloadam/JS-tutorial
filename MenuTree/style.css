@@ -1,23 +1,37 @@
 
 #menu1{
   height:0px;
+  margin:0 0 0 8.5px;
   overflow: hidden;
-  transition: all .2s;
-  display: flex
+  transition: all .1s;
+  display: flex;
+}
+input{
+  display:none;
 }
 ul{
-  padding: 0
+  padding: 0;
+  margin:0;
 }
 li{
   margin: 0px;
   display: flex;
   align-items: center
 }
+
+label::before{
+  content:"+";
+  padding:0 5px;
+  margin-right: 5px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius:10px;
+}
 .verticalBranch{
   width:10px;
   height: 1px;
   margin: 0;
-  border-top:3px dotted black;
+  border-top:3px solid black;
 }
 .menuElement {
   margin-left:10px;
@@ -25,9 +39,14 @@ li{
 #c1:checked ~ #menu1 {
   height:72px;
 }
+#c1:checked ~ label::before{
+  content:"-";
+  padding:0 7.5px;
+}
 
 .treeLine{
-  width:2px;
+  width:3px;
+  margin: 0px;
   height: calc(100% - 10px);
-  border-left:3px dotted black;
+  background-color: #000000
 }
