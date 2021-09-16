@@ -1,20 +1,30 @@
-nav {
-  position: relative;
-}
+
 #menu1{
   height:0px;
-  border-left:1px solid black;
   overflow: hidden;
-  transition: all .5s;
-  margin: 0 0 0 10px;
-  padding: 0;
+  transition: all .2s;
+  display: flex
 }
-li::before{
-  content: '----';
-  left: 0;
-  overflow: hidden;
+ul{
+  padding: 0
 }
-#c1:checked ~ #menu1 {
-  height:60px;
+li{
+  margin: 0px;
+  display: flex;
+  align-items: center
+}
+li div{
+  width:10px;
+  height: 1px;
+  margin: 0;
+  border-top:3px dotted black;
+}
+c1:checked ~ #menu1 {
+  height:100px;
 }
 
+.treeLine{
+  width:2px;
+  height: calc(100% - 10px);
+  border-left:3px dotted black;
+}
