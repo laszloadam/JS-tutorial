@@ -12,34 +12,44 @@ body {
     border: 1px solid #000000;
     border-radius: 20px;
     transition: all 1s;
+    position: absolute;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 .ball1 {
-    position: absolute;
     left: 0;
     background-color: rgb(133, 36, 36);
     animation-name: moves1;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
 .ball2 {
-    position: absolute;
     right: 0;
     background-color: rgb(36, 78, 133);
     animation-name: moves2;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
 }
+
+
+.dna5 .ball1,.dna6 .ball1, .dna7 .ball1 {
+    background-color: rgb(36, 78, 133);
+}
+.dna5 .ball2,.dna6 .ball2,.dna7 .ball2{
+    
+    background-color: rgb(133, 36, 36);  
+}
+
+
 .dnaLine {
     position: absolute;
-    width: 40px;
-    height: 10px;
+    width: 45px;
+    height: 5px;
     background-color: rgb(26, 245, 245);
     border: 1px solid #000000;
     border-radius: 20px;
-    margin: 5px 30px;
+    margin: 7.5px 25px;
     animation-name: moveLine1;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes moves1 {
@@ -49,9 +59,9 @@ body {
     100% {left:0px;z-index:-1}
 }
 @keyframes moveLine1 {
-    0% {width:40px}
+    0% {width:45px}
     50% {width:10px; margin:5px 45px}
-    100% {width:40px}
+    100% {width:45px}
 }
 @keyframes moves2 {
     0% {right:0px;z-index:-1}
@@ -59,15 +69,30 @@ body {
     50% {right:80px;z-index:1}
     100% {right:0px;z-index:1}
 }
-.dna2 .ball1, .dna2 .ball2 {
+
+
+.dna2 .dnaLine, .dna6 .dnaLine{
     animation-delay: .5s;
 }
-.dna2 .dnaLine{
+.dna3 .dnaLine, .dna7 .dnaLine{
+    animation-delay: 1s;
+}
+.dna4 .dnaLine{
+    animation-delay: 1.5s;
+}
+.dna2 .ball1, .dna2 .ball2, .dna6 .ball1,.dna6 .ball2 {
     animation-delay: .5s;
 }
-.dna3 .dnaLine{
+.dna3 .ball1, .dna3 .ball2, .dna7 .ball1, .dna7 .ball2 {
     animation-delay: 1s;
 }
-.dna3 .ball1, .dna3 .ball2 {
-    animation-delay: 1s;
+.dna4 .ball1, .dna4 .ball2 {
+    animation-delay: 1.5s;
+}
+
+
+
+/* első sor stop!! */
+.dna1 .ball1, .dna1 .ball2 {
+    animation-name: stop;
 }
