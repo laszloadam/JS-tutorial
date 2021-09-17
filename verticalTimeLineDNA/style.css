@@ -1,0 +1,73 @@
+body {
+    background-color: cadetblue;
+}
+.dnaBody {
+    width:100px;
+    height: 22px;
+    position: relative;
+}
+.ball1, .ball2 {
+    height:20px;
+    width:20px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    transition: all 1s;
+}
+.ball1 {
+    position: absolute;
+    left: 0;
+    background-color: rgb(133, 36, 36);
+    animation-name: moves1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.ball2 {
+    position: absolute;
+    right: 0;
+    background-color: rgb(36, 78, 133);
+    animation-name: moves2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.dnaLine {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background-color: rgb(26, 245, 245);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin: 5px 30px;
+    animation-name: moveLine1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moves1 {
+    0% {left:0px;z-index:1}
+    49% {z-index:1}
+    50% {left:80px;z-index:-1}
+    100% {left:0px;z-index:-1}
+}
+@keyframes moveLine1 {
+    0% {width:40px}
+    50% {width:10px; margin:5px 45px}
+    100% {width:40px}
+}
+@keyframes moves2 {
+    0% {right:0px;z-index:-1}
+    49% {z-index:-1}
+    50% {right:80px;z-index:1}
+    100% {right:0px;z-index:1}
+}
+.dna2 .ball1, .dna2 .ball2 {
+    animation-delay: .5s;
+}
+.dna2 .dnaLine{
+    animation-delay: .5s;
+}
+.dna3 .dnaLine{
+    animation-delay: 1s;
+}
+.dna3 .ball1, .dna3 .ball2 {
+    animation-delay: 1s;
+}
