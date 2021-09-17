@@ -1,9 +1,9 @@
 
-#menu1{
+#menu1, #menu2, #menu3{
   height:0px;
-  margin:0 0 0 8.5px;
+  margin:0 0 0 7px;
   overflow: hidden;
-  transition: all .1s;
+  transition: all 2s;
   display: flex;
 }
 input{
@@ -20,12 +20,18 @@ li{
 }
 
 label::before{
-  content:"+";
-  padding:0 5px;
+  content:"\2795";
+  font-size: 12px;
   margin-right: 5px;
   background-color: #000000;
   color: #ffffff;
   border-radius:10px;
+  padding: 1px 0;
+}
+.treeLine{
+  width:3px;
+  margin-bottom: 8px;
+  background-color: #000000
 }
 .verticalBranch{
   width:10px;
@@ -36,17 +42,29 @@ label::before{
 .menuElement {
   margin-left:10px;
 }
+
+
+/* -- Első lenyíló menü -- */
 #c1:checked ~ #menu1 {
-  height:72px;
+  height:auto;
 }
 #c1:checked ~ label::before{
-  content:"-";
-  padding:0 7.5px;
+  content:"\2796";
 }
 
-.treeLine{
-  width:3px;
-  margin: 0px;
-  height: calc(100% - 10px);
-  background-color: #000000
+/* -- Második lenyíló menü -- */
+#c2:checked ~ #menu2 {
+  height:auto;
 }
+#c2:checked ~ label::before{
+  content:"\2796";
+}
+
+/* -- Harmadik lenyíló menü -- */
+#c3:checked ~ #menu3 {
+  height:auto;
+}
+#c3:checked ~ label::before{
+  content:"\2796";
+}
+
