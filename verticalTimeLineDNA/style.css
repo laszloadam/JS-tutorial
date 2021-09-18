@@ -1,10 +1,37 @@
 body {
     background-color: cadetblue;
+
+}
+nav {
+    display: flex;
+    flex-direction: row;
+}
+.menuElements {
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
 .dnaBody {
-    width:100px;
-    height: 22px;
+    width:120px;
+    height: 40px;
     position: relative;
+    margin: 5px 0;
+    padding:10px;
+    box-sizing: border-box;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dnaBody:hover {
+    cursor: pointer;
+    filter: brightness(200%);
+    background-color: rgba(0,0,0,.5);
 }
 .ball1, .ball2 {
     height:20px;
@@ -13,17 +40,17 @@ body {
     border-radius: 20px;
     transition: all 1s;
     position: absolute;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 .ball1 {
-    left: 0;
+    left: 10px;
     background-color: rgb(133, 36, 36);
     animation-name: moves1;
 }
 .ball2 {
-    right: 0;
+    right: 10px;
     background-color: rgb(36, 78, 133);
     animation-name: moves2;
 }
@@ -40,54 +67,59 @@ body {
 
 .dnaLine {
     position: absolute;
-    width: 45px;
+    width: 60px;
     height: 5px;
     background-color: rgb(26, 245, 245);
     border: 1px solid #000000;
     border-radius: 20px;
-    margin: 7.5px 25px;
-    animation-name: oveLine1;
-    animation-duration: 2s;
+    margin: 7.5px 20px;
+    animation-name: moveLine1;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    z-index: -2;
 }
 
 @keyframes moves1 {
-    0% {left:0px;z-index:1}
+    0% {left:10px;z-index:1}
+    25% {height: 25px;width: 25px;}
     49% {z-index:1}
-    50% {left:80px;z-index:-1}
-    100% {left:0px;z-index:-1}
+    50% {left:90px;z-index:-1;filter: brightness(100%)}
+    75% {height:15px;width:15px;filter: brightness(70%)}
+    100% {left:10px;z-index:-1;filter: brightness(100%)}
 }
 @keyframes moveLine1 {
-    0% {width:45px}
+    0% {width:60px}
     50% {width:10px; margin:7.5px 45px}
-    100% {width:45px}
+    100% {width:60px}
 }
 @keyframes moves2 {
-    0% {right:0px;z-index:-1}
+    0% {right:10px;z-index:-1;filter: brightness(100%)}
+    25% {height: 15px;width: 15px;filter: brightness(70%)}
     49% {z-index:-1}
-    50% {right:80px;z-index:1}
-    100% {right:0px;z-index:1}
+    50% {right:90px;z-index:1;filter: brightness(100%)}
+    75% {height: 25px;width: 25px;}
+    100% {right:10px;z-index:1}
 }
 
 
 .dna2 .dnaLine, .dna6 .dnaLine{
-    animation-delay: .5s;
+    animation-delay: .375s;
 }
 .dna3 .dnaLine, .dna7 .dnaLine{
-    animation-delay: 1s;
+    animation-delay: 0.75s;
 }
 .dna4 .dnaLine, .dna8 .dnaLine{
-    animation-delay: 1.5s;
+    animation-delay: 1.125s;
 }
 .dna2 .ball1, .dna2 .ball2, .dna6 .ball1,.dna6 .ball2 {
-    animation-delay: .5s;
+    animation-delay: .375s;
 }
 .dna3 .ball1, .dna3 .ball2, .dna7 .ball1, .dna7 .ball2 {
-    animation-delay: 1s;
+    animation-delay: .75s;
 }
 .dna4 .ball1, .dna4 .ball2, .dna8 .ball1, .dna8 .ball2 {
-    animation-delay: 1.5s;
+    animation-delay: 1.125s;
 }
 
 
@@ -97,8 +129,3 @@ body {
     animation-name: stop;
 }
 */
-
-.dna1:hover {
-    zoom: 150%;
-    transition: all .2s;
-}
