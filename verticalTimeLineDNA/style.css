@@ -60,7 +60,7 @@ body {
 }
 @keyframes moveLine1 {
     0% {width:45px}
-    50% {width:10px; margin:5px 45px}
+    50% {width:10px; margin:7.5px 45px}
     100% {width:45px}
 }
 @keyframes moves2 {
@@ -93,6 +93,7 @@ body {
 
 
 /* első sor stop!! */
-.dna1 .ball1, .dna1 .ball2 {
+/*.dna1 .ball1, .dna1 .ball2 {
     animation-name: stop;
 }
+*/
