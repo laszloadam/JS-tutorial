@@ -7,36 +7,31 @@ nav {
 }
 .menuElements{
   height: 320px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
   margin:0;
+  padding: 0;
+  position: relative;
 }
 li{
   height: 40px;
+  width: 120px;
   display:flex;
-  justify-content: center;
   align-items: center;
-  list-style: none
+  list-style: none;
+  z-index: -3;
+  overflow: hidden;
 }
 a {
+    right: 120px;
     color: #ffffff;
     background-color: #000000;
     padding:0 5px;
     text-decoration: none;
-    display:none;
-    position: relative
+    display:block;
+    opacity: 0%;
+    position: relative;
+    transition: all .5s;
 }
-a::before {
-  position: absolute;
-  top:8px;
-  left:-100px;
-  content:"";
-  width:100px;
-  border:2px solid #000000;
-  z-index: -2
-}
+
 .menuDNA{
   height: 100%;
   display:flex;
@@ -63,7 +58,6 @@ a::before {
 .ball1, .ball2 {
     height:20px;
     width:20px;
-    border:1px solid #000000;
     border: 3px solid #ffffff;
     border-radius: 20px;
     transition: all 1s;
@@ -71,30 +65,23 @@ a::before {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    background-color: lightgrey;
     box-shadow: 0 0 5px lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ball1 {
     left: 10px;
-    background-color: rgb(133, 36, 36);
-    background-color: lightgrey;
     animation-name: moves1;
 }
 .ball2 {
     right: 10px;
-    background-color: rgb(36, 78, 133);
-    background-color: lightgrey;
     animation-name: moves2;
 }
-
-
-.dna5 .ball1,.dna6 .ball1, .dna7 .ball1, .dna8 .ball1 {
-    background-color: rgb(36, 78, 133);
-    background-color: lightgrey
-}
-.dna5 .ball2,.dna6 .ball2,.dna7 .ball2, .dna8 .ball2 {
-    
-    background-color: rgb(133, 36, 36);
-    background-color: lightgrey
+.ball1 img, .ball2 img {
+    zoom: 60%;
+    opacity: .5;
 }
 
 
@@ -102,10 +89,8 @@ a::before {
     position: absolute;
     width: 60px;
     height: 5px;
-    background-color: #000000;
     background-color: lightgrey;
     box-shadow: 0 0 5px lightgrey;
-    border: 1px solid #000000;
     border:3px solid #ffffff;
     border-radius: 20px;
     margin: 7.5px 20px;
