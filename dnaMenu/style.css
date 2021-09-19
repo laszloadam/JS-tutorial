@@ -20,16 +20,16 @@ li{
   z-index: -3;
   overflow: hidden;
 }
-a {
+.linkTitle {
     right: 120px;
     color: #ffffff;
     background-color: #000000;
     padding:0 5px;
     text-decoration: none;
     display:block;
-    opacity: 0%;
+    opacity: 0;
     position: relative;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .menuDNA{
@@ -50,8 +50,12 @@ a {
     justify-content: center;
     align-items: center;
 }
+.link {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
 .dnaBody:hover {
-    cursor: pointer;
     filter: brightness(200%);
     background-color: rgba(0,0,0,.2);
 }
@@ -66,7 +70,7 @@ a {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     background-color: lightgrey;
-    box-shadow: 0 0 5px lightgrey;
+    box-shadow: 0 0 8px #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +84,7 @@ a {
     animation-name: moves2;
 }
 .ball1 img, .ball2 img {
-    zoom: 60%;
+    height: 90%;
     opacity: .5;
 }
 
@@ -142,11 +146,3 @@ a {
 .dna4 .ball1, .dna4 .ball2, .dna8 .ball1, .dna8 .ball2 {
     animation-delay: 1.125s;
 }
-
-
-
-/* első sor stop!! */
-/*.dna1 .ball1, .dna1 .ball2 {
-    animation-name: stop;
-}
-*/

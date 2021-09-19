@@ -1,13 +1,13 @@
-let a = document.getElementsByTagName('a');
+let linkTitle = document.getElementsByClassName('linkTitle');
 
 function showIcon(x) {
   for(let n=0; n<=9; n++){
     if(x==n){
-      a[x].style.right="-20px";
-      a[x].style.opacity="100%"
+      linkTitle[x].style.right="-20px";
+      linkTitle[x].style.opacity="1"
     } else {
-      a[n].style.right="120px";
-      a[n].style.opacity="0%"
+      linkTitle[n].style.right="120px";
+      linkTitle[n].style.opacity="0"
     }
   }
 }
