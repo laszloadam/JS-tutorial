@@ -1,0 +1,12 @@
+#allBook{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.books {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 400px;
+    border:2px solid #000000
+}

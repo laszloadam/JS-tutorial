@@ -1,0 +1,45 @@
+{
+    "books" : [
+        {
+            "title": "Az oroszlán, a boszorkány és a ruhásszekrény",
+            "author": "C.S. Lewis",
+            "year of publication": 1950,
+            "image": "/pics/narnia2.jpg",
+            "has been read": true,
+            "main characters": ["Lucy Pevensie", "Peter Pevensie", "Edmound Pevensie", "Susan Pevensie"],
+            "quotes": {
+                "p71": "Akit egyszer Namiában királlyá vagy királynővé koronáztak, az örökké viselni fogja.",
+                "p72": "Tudjátok, ő végső soron vadon élő állat. Nem egy szelídített oroszlán."
+            },
+            "borrowed by": ["Viki"],
+            "rating": 4
+        },
+        {
+            "title": "Aliens versus Predator: Háború",
+            "author": "Stephani Perry",
+            "year of publication": 1999,
+            "image": "/pics/avpWar.jpg",
+            "has been read": true,
+            "main characters": ["Machiko Noguchi"],
+            "quotes": {
+                "p16": "nincs idézet"
+            },
+            "borrowed by": ["Peti"],
+            "rating": 5
+        },
+        {
+            "title": "Harry Potter és a bölcsek köve",
+            "author": "J. K. Rowling",
+            "year of publication": 1997,
+            "image": "/pics/hp1.jpg",
+            "has been read": true,
+            "main characters": ["Harry Potter", "Ron Weasley", "Hermione Granger"],
+            "quotes": {
+                "p239": "Átkozottként élni rosszabb, mint meghalni!",
+                "p240": "Meghalni csak emberek tudnak, de benne nem volt már semmi emberség."
+            },
+            "borrowed by": null,
+            "rating": 5
+        }
+    ]
+}
