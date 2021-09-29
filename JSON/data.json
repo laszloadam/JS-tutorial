@@ -3,43 +3,42 @@
         {
             "title": "Az oroszlán, a boszorkány és a ruhásszekrény",
             "author": "C.S. Lewis",
-            "year of publication": 1950,
+            "publication": 1950,
             "image": "/pics/narnia2.jpg",
-            "has been read": true,
-            "main characters": ["Lucy Pevensie", "Peter Pevensie", "Edmound Pevensie", "Susan Pevensie"],
-            "quotes": {
-                "p71": "Akit egyszer Namiában királlyá vagy királynővé koronáztak, az örökké viselni fogja.",
-                "p72": "Tudjátok, ő végső soron vadon élő állat. Nem egy szelídített oroszlán."
-            },
-            "borrowed by": ["Viki"],
+            "read": true,
+            "characters": ["Lucy Pevensie", "Peter Pevensie", "Edmound Pevensie", "Susan Pevensie"],
+            "description" : "Narnia egy jéggé dermesztett ország, ahol sohasem jár a Mikulás és nem létezik a karácsony. A négy testvér - Peter, Susan, Edmund és Lucy - egy vidéki kastélyban álló ruhásszekrényen keresztül lép be a birodalomba, hogy felvegye a harcot a Fehér Boszorkánnyal és csatlósaival....",
             "rating": 4
         },
         {
             "title": "Aliens versus Predator: Háború",
             "author": "Stephani Perry",
-            "year of publication": 1999,
+            "publication": 1999,
             "image": "/pics/avpWar.jpg",
-            "has been read": true,
-            "main characters": ["Machiko Noguchi"],
-            "quotes": {
-                "p16": "nincs idézet"
-            },
-            "borrowed by": ["Peti"],
+            "read": true,
+            "characters": ["Machiko Noguchi"],
+            "description": "Machiko Noguchi már egy teljes éve él a vadászok közt, de még mindig úgy érzi, hogy társai nem tartják egyenrangú félnek. Bármit tesz, jutalma büntetés és megvetés. Tudja, nem maradhat sokáig a jautják között. Lara, Jess és Ellis, a 949-es állomáson történt mészárlás túlélői, egy mentőkabinban fuldokolva sodródnak az űrben. Már csak perceik vannak hátra az életből, amikor a Weyland-Yutani társaság megmenti őket. A csapatot egy perembolygóra szállítják. A ragadozók hajója ismét pályára áll egy világ körül, hogy elhintse rajta a halál magvait. A vadászat izgalmasnak ígérkezik, hiszen egyszerre akarnak megküzdeni az univerzum két legveszélyesebb prédájával, az idegenekkel és az emberekkel. Machiko kénytelen meghozni élete legnehezebb döntését, és harcba száll - ezúttal az emberek oldalán, az idegenek és a ragadozók ellen.",
+            "rating": 5
+        },
+        {
+            "title": "Assassin's Creed - Reneszánsz",
+            "author": "Oliver Bowden",
+            "publication": 2017,
+            "image": "/pics/ac2.jpg",
+            "read": true,
+            "characters": ["Machiko Noguchi"],
+            "description": "<p>BOSSZÚT ÁLLOK MINDAZOKON, KIK ELÁRULTÁK CSALÁDOMAT. NEVEM: EZIO AUDITORE DA FIRENZE. ORGYILKOS VAGYOK… </p><p>Egy bosszúra szomjas fiatalember eposzi méretű küldetésre indul, miután Itália uralkodó dinasztiái elárulták őt. Ám ahhoz, hogy visszaállítsa családja becsületét, és véget vessen hazája romlásának, ki kell tanulnia az orgyilkosok mesterségét.</p><p>Miközben a szabadságért és igazságért harcol, Ezio útját olyan kiváló elmék segítik, mint Leonardo da Vinci és Niccolò Machiavelli, akik – mint koruk legbölcsebb gondolkodói – beavatják a túlélés fortélyaiba.</p><p>Társai számára Ezio fogja megtestesíteni az erőt, mely elsöpri a régit, és újat hoz a helyébe. Ellenségei szemében pedig fenyegető jelképpé válik, kinek rendeltetése, hogy eltiporja a zsarnokságot, mely Itália népét sanyargatja.</p><p>Kezdődjék a hatalom, az összeesküvés és a bosszú örök színjátékának reneszánsz krónikája.</p><p>HISZEN AZ IGAZSÁGOT VÉRREL ÍRJÁK.</p>",
             "rating": 5
         },
         {
             "title": "Harry Potter és a bölcsek köve",
             "author": "J. K. Rowling",
-            "year of publication": 1997,
+            "publication": 1997,
             "image": "/pics/hp1.jpg",
-            "has been read": true,
-            "main characters": ["Harry Potter", "Ron Weasley", "Hermione Granger"],
-            "quotes": {
-                "p239": "Átkozottként élni rosszabb, mint meghalni!",
-                "p240": "Meghalni csak emberek tudnak, de benne nem volt már semmi emberség."
-            },
-            "borrowed by": null,
-            "rating": 5
+            "read": true,
+            "characters": ["Harry Potter", "Ron Weasley", "Hermione Granger"],
+            "description": "A Roxfort Boszorkány- és Varázslóképző Szakiskolában töltött első tanév kemény erőpróba a diákok számára. Harry Potternek nem csupán a vizsgákon kell megfelelnie, de egy életre-halálra szóló küzdelemnek is részese lesz. A tizenegy éves varázslójelölt története meghódította az egész világot.",
+            "rating": 2
         }
     ]
 }
