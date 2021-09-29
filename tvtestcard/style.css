@@ -12,12 +12,27 @@ body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
-    
+    .bg-cells {
+        height: 100%;
+        width: calc(100vw / 17);
+        background-color: #000000;
+    }
     .div1 { grid-area: 2 / 2 / 15 / 19;
         background-color: aqua;}
 
-    .div2 { grid-area: 1 / 1 / 2 / 20; }
-    .div3 { grid-area: 15 / 1 / 16 / 20; }
+    .bg-border-cells-t-b {
+        display: flex;
+    }
+    .bg-cells:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    .div2 {
+        grid-area: 1 / 1 / 2 / 20;
+    }
+    .div3 {
+        grid-area: 15 / 1 / 16 / 20;
+        display: flex;
+    }
     .div4 { grid-area: 2 / 19 / 15 / 20; }
     .div5 { grid-area: 2 / 1 / 15 / 2; }
     .div6 { grid-area: 3 / 3 / 8 / 4; }
