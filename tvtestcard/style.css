@@ -1,11 +1,13 @@
 body {
     margin: 0;
+    height: 100vh;
     background-color: #000000;
     color:white
 }
 .parent {
     width: 100vw;
-    height: 100vh;
+    height:100%;
+    padding-bottom:56.25%;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
     grid-template-rows: repeat(15, 1fr);
@@ -23,8 +25,15 @@ body {
     .bg-border-cells-t-b {
         display: flex;
     }
-    .bg-cells:nth-child(odd) {
+    .bg-border-cells-l-r{
+      display:flex;
+      flex-direction: column
+    }
+    .bg-border-cells-t-b .bg-cells:nth-child(odd) {
         background-color: #ffffff;
+    }
+    .bg-border-cells-l-r .bg-cells:nth-child(even) {
+      background-color: #ffffff;
     }
     .div2 {
         grid-area: 1 / 1 / 2 / 20;
